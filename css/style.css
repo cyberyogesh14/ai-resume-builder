@@ -1,0 +1,397 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #070b1f;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Animated Gradient Background */
+.bg {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, #0ff, transparent 40%),
+              radial-gradient(circle at 70% 70%, #a020f0, transparent 40%);
+  animation: moveBg 10s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes moveBg {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
+
+/* ================= NAVBAR PREMIUM ================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  backdrop-filter: blur(20px);
+  background: rgba(10, 15, 30, 0.6);
+  border-bottom: 1px solid rgba(0,255,255,0.2);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.nav-logo {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, cyan, purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  cursor: pointer;
+}
+
+.nav-logo span {
+  color: cyan;
+}
+
+/* Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Links */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+/* Underline animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, cyan, purple);
+  transition: 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: cyan;
+}
+
+/* CTA Button */
+.nav-cta {
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, cyan, purple);
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px cyan;
+}
+
+/* Add space below navbar */
+body {
+  padding-top: 80px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  background: linear-gradient(90deg, cyan, purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav-links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: cyan;
+}
+
+/* CTA */
+.cta {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1px solid cyan;
+}
+
+.cta:hover {
+  background: cyan;
+  color: black;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  margin-top: 140px;
+}
+
+.hero h1 {
+  font-size: 55px;
+}
+
+.hero span {
+  background: linear-gradient(90deg, cyan, purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, cyan, purple);
+  color: black;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  transform: scale(1.1);
+}
+
+/* BUILDER */
+.builder {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 80px;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 350px;
+  box-shadow: 0 0 40px rgba(0,255,255,0.3);
+  transition: 0.4s;
+}
+
+.glass:hover {
+  transform: translateY(-10px);
+}
+
+/* Inputs */
+input, textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(90deg, cyan, purple);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* ================= FEATURE + ABOUT SEXY ================= */
+
+/* Animated gradient text */
+.gradient-text {
+  font-size: 50px;
+  background: linear-gradient(90deg, cyan, purple, cyan);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientMove 5s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+/* Hero Section */
+.feature-hero {
+  text-align: center;
+  margin-top: 140px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.feature-hero p {
+  opacity: 0.7;
+}
+
+/* Grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 80px 120px;
+}
+
+/* Cards */
+.feature-card,
+.about-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 30px;
+  transition: 0.4s;
+  box-shadow: 0 0 30px rgba(0,255,255,0.2);
+  animation: fadeUp 1s ease forwards;
+}
+
+.feature-card:hover,
+.about-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 50px cyan;
+}
+
+/* About Section */
+.about-section {
+  padding: 120px 200px;
+  text-align: center;
+}
+
+/* Fade animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================= */
+/* SEXY RESUME NAVBAR           */
+/* ============================= */
+
+.resume-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(20px);
+  background: rgba(0,0,0,0.6);
+  border-bottom: 1px solid rgba(0,255,255,0.2);
+  z-index: 1000;
+}
+
+.resume-nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.resume-logo {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, cyan, purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: logoGlow 2s infinite alternate;
+}
+
+.resume-logo span {
+  color: cyan;
+}
+
+@keyframes logoGlow {
+  from { text-shadow: 0 0 10px cyan; }
+  to { text-shadow: 0 0 25px purple; }
+}
+
+/* MENU */
+.resume-nav-menu {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+/* LINKS */
+.resume-link {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.resume-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, cyan, purple);
+  transition: width 0.3s ease;
+}
+
+.resume-link:hover::after {
+  width: 100%;
+}
+
+.resume-link:hover {
+  color: cyan;
+}
+
+/* CTA BUTTON */
+.resume-cta {
+  padding: 8px 20px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, cyan, purple);
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.resume-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px cyan;
+}
+
+/* ACTIVE STATE */
+.resume-cta.active {
+  box-shadow: 0 0 30px cyan;
+}
+
+/* Add spacing below fixed navbar */
+body {
+  padding-top: 80px;
+}
